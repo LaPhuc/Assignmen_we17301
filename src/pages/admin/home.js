@@ -1,73 +1,50 @@
-import { deleteProject, getProjects } from "@/api/project";
-import Header from "@/components/header";
-import Nav from "@/components/nav";
-import { router, useEffect, useState } from "@/lib";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { getIntroduce } from "@/api/introduce";
+import Header from "@/components/admin/header";
+import Nav from "@/components/admin/nav";
+import { useEffect, useState } from "@/lib";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    getProjects().then((data) => setData(data));
+    getIntroduce().then((data) => setData(data));
   }, []);
-  useEffect(function () {
-    const btnr = document.querySelectorAll(".btn-remove");
-    const btnadd = document.querySelectorAll(".btn-add");
-    for (let btna of btnadd) {
-      btna.addEventListener("click", function () {
-        router.navigate("/Add")
-      });
-    }
-    for (let btn of btnr) {
-      const id = btn.dataset.id;
-      btn.addEventListener("click", function () {
-          deleteProject(id).then(() => {
-              const newData = data.filter((project) => project.id != id);
-              alert("bạn muốn xoá dự án " + data[id - 1].name)
-              setData(newData); 
-          });
-      })
-    }
-  });
-  return /*html*/`
+  return /*html*/ `
     <div class="">
       <div class="sticky top-0">${Header()}</div>
       <div class="flex w-full">
-        <div class="w-[15%] sticky top-0">
+        <div class="w-[15%] fixed top-0 h-[9in] bg-[#292a2e]">
           ${Nav()}
         </div>
-        <div class="w-[75%] mx-auto mt-5"> 
-          <h1>Quản lý dự án</h1>
-          <button class="btn btn-danger btn-add">
-              Thêm
-          </button>
-          <table class="table table-bordered">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Tên dự án</th>
-                      <th>Nội dung</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-              ${data
-      .map((project, index) => {
-        return `
-                  <tr>
-                    <td>${index + 1}</td>
-                    <td>${project.name}</td>
-                    <td>${project.contend}</td>
-                    <td width="150">
-                        <button data-id="${project.id}" class="btn btn-danger btn-remove">
-                            Xóa
-                        </button>
-                        <a href="/admin/projects/${project.id}/edit">Sửa</a>
-                    </td>
-                  </tr>
-                `;
-      })
-      .join("")}
-              </tbody >
+        <div class="w-[75%] ml-[20%] mt-5"> 
+          <h1>Quản lý thông tin</h1>
+          <table class="table table-bordered mt-3">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Time date</th>
+                <th>Job</th>
+                <th>Describe</th>
+                <th>Image</th>
+                <th>interest</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${data.name}</td>
+                <td>${data.date}</td>
+                <td>${data.job}</td>
+                <td>${data.describe}</td>
+                <td class = "block"><img style="width:100px;display: grid; align-items: center;" class = "" src="${
+                  data.img
+                }" alt=""></td>
+                <td>${data.interest}</td>
+                <td width="150">
+                    <a href="/admin/edit/${data.id}" class="btn btn-danger">Sửa</a>
+                </td>
+              </tr>
+            </tbody>
           </table >
         </div >
       </div>

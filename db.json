@@ -1,17 +1,91 @@
 {
   "projects": [
     {
-      "id": "2",
-      "name": "projects 2",
-      "contend": "contend",
-      "feared-Image": "",
-      "Album": [],
-      "linkGithub": "",
-      "linkPreview": "",
-      "date": "",
-      "feedback": {},
-      "technology": "",
-      "category": ""
+      "id": 1,
+      "name": "Twitter",
+      "describe": "Front end developer",
+      "content": "My name is La Van Phuc, I'm a computer technician with a great passion for programming. Improved my skills as a Front-End developerI develop websites and applications using HTML, CSS, and JavaScript.I'm always improving myself with each project I get my hands on. I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek to achieve my best version.",
+      "linkGithub": "https://github.com/NgocDuc82/twitter-k3",
+      "linkPreview": "a",
+      "completiontime": "11/10/2022",
+      "feedback": "a",
+      "technology": "React",
+      "feartedImage": [
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806638/ECMA/dhtmt5tj3dx6iez8hmj2.jpg"
+      ],
+      "Album": [
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806640/ECMA/n97l0p0jhyvry1hwopdo.png",
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806641/ECMA/lea41ogowwespq25esfs.jpg"
+      ],
+      "categoryProjectId": "2"
+    },
+    {
+      "id": 1,
+      "name": "User form",
+      "describe": "Front end developer",
+      "content": "My name is La Van Phuc, I'm a computer technician with a great passion for programming. Improved my skills as a Front-End developerI develop websites and applications using HTML, CSS, and JavaScript.I'm always improving myself with each project I get my hands on. I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek to achieve my best version.",
+      "linkGithub": "https://github.com/Laphuc123/user-form",
+      "linkPreview": "a",
+      "completiontime": "18/10/2022",
+      "feedback": "a",
+      "technology": "React",
+      "feartedImage": [
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806638/ECMA/dhtmt5tj3dx6iez8hmj2.jpg"
+      ],
+      "Album": [
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806640/ECMA/n97l0p0jhyvry1hwopdo.png",
+        "https://res.cloudinary.com/dwjntndq7/image/upload/v1676806641/ECMA/lea41ogowwespq25esfs.jpg"
+      ],
+      "categoryProjectId": "2"
     }
-  ]
+  ],
+  "categoryProjects": [
+    {
+      "id": "1",
+      "name": "HTML/CSS/JS"
+    },
+    {
+      "id": "2",
+      "name": "Reactjs"
+    },
+    {
+      "id": "3",
+      "name": "Php Larvel"
+    }
+  ],
+  "introduce": {
+    "id": "1",
+    "name": "Lã Văn Phúc",
+    "date": "09/04/2003",
+    "job": "Front end developer",
+    "describe": "I'm a computer techniclan with a focus on web development with HTML, CSS and JavaScript",
+    "img": "https://res.cloudinary.com/dwjntndq7/image/upload/v1676861413/ECMA/193732034_829940461062815_4218348303342376775_n_mmhfwu.jpg",
+    "imgskills": "https://res.cloudinary.com/dwjntndq7/image/upload/v1676814065/ECMA/ofdqem19zoyg0rkjzesg.jpg",
+    "content": "My name is La Van Phuc, I'm a computer technician with a great passion for programming. Improved my skills as a Front-End developerI develop websites and applications using HTML, CSS, and JavaScript.I'm always improving myself with each project I get my hands on. I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek to achieve my best version.",
+    "interest": "Nghe nhạc",
+    "skills": [
+      {
+        "name": "HTML",
+        "imgskill": "./../../public/img/1.png"
+      },
+      {
+        "name": "CSS",
+        "imgskill": "./../../public/img/3.png"
+      },
+      {
+        "name": "JS",
+        "imgskill": "./../../public/img/4.png"
+      }
+    ]
+  },
+  "contact": {
+    "phone": "0335887303",
+    "email": "phuclvph20069@fpt.edu.vn",
+    "facebook": "https://www.facebook.com/phuc.la.39750",
+    "instagram": "https://www.instagram.com/_laphuc/"
+  },
+  "users": {
+    "email": "phuc@gmail.com",
+    "password": "phuc1234"
+  }
 }
